@@ -1,12 +1,12 @@
 
 |Basic               |Spec Sheet|
 |--                  |--                                                            |
-|CPU                 |Quad-core (4x2.0 GHz Cortex-A53)      |
-|Chipset             |Mediatek Helio A22 MT6761 (12 nm)                                     |
+|CPU                 |Quad-core (4x1.8 GHz Cortex-A53)      |
+|Chipset             |Mediatek Helio A20 MT6761 (12 nm)                                     |
 |GPU                 |PowerVR GE6300                                             |
-|Memory              |2/3/4GB RAM                                                     |
+|Memory              |2GB RAM                                                     |
 |Android Version     |11 (HiOS 7.6)                                               |
-|Storage             |64GB                                                      |
+|Storage             |32GB                                                      |
 
 Blocking checks
 - [X] Correct screen/recovery size
