@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/tecno/kelly
+LOCAL_PATH := device/tecno/kg5
 
 # A/B
 AB_OTA_PARTITIONS += \
