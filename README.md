@@ -1,4 +1,3 @@
-
 |Basic               |Spec Sheet|
 |--                  |--                                                            |
 |CPU                 |Quad-core (4x1.8 GHz Cortex-A53)      |
@@ -8,38 +7,49 @@
 |Android Version     |11 (HiOS 7.6)                                               |
 |Storage             |32GB                                                      |
 
-Blocking checks
-- [X] Correct screen/recovery size
-- [X] Working Touch, screen
-- [X] Backup to internal/microSD
-- [X] Restore from internal/microSD
-- [X] reboot to system
-- [X] ADB
-Medium checks
-- [X] update.zip sideload
-- [X] UI colors (red/blue inversions)
-- [X] Screen goes off and on
-- [X] F2FS/EXT4 Support, exFAT/NTFS where supported
-- [X] all important partitions listed in mount/backup lists
-- [X] backup/restore to/from external (USB-OTG) storage (mouse and keyboard works)
-- [X] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [X] decrypt /data
-- [X] Correct date
+## Legend
 
-Minor checks
-- [X] MTP export
-- [X] reboot to bootloader
-- [X] reboot to recovery
-- [X] poweroff
-- [X] battery level
-- [X] temperature
-- [X] encrypted backups
-- [X] input devices via USB (USB-OTG) - keyboard, mouse and disks
-- [X] USB mass storage export
-- [X] set brightness
-- [X] vibrate
-- [X] screenshot
-- [X] partition SD card
+- ✔ Working
+- ✖ Not Working
+- ○ Untested
 
-# Twrp Recovery Tree for Tecno Spark 8C KG5j (kelly)
-![Tecno Spark 8C KG5j (kelly)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-8c-1.jpg)
+---
+
+## Blocking checks
+
+- ✔ Correct screen/recovery size
+- ✖ Working Touch (display works, touch does not)
+- ○ Backup to internal/microSD
+- ○ Restore from internal/microSD
+- ✔ Reboot to system
+- ✔ ADB
+
+## Medium checks
+
+- ✔ update.zip sideload
+- ✔ UI colors (red/blue inversions)
+- ✔ Screen goes off and on
+- ✔ F2FS/EXT4 Support, exFAT/NTFS where supported
+- ○ All important partitions listed in mount/backup lists
+- ○ Backup/restore to/from external (USB-OTG) storage (mouse and keyboard)
+- ○ Backup/restore to/from ADB
+- ✔ Decrypt /data
+- ✔ Correct date
+
+## Minor checks
+
+- ○ MTP export
+- ✔ Reboot to bootloader
+- ✔ Reboot to recovery
+- ✔ Poweroff
+- ○ Battery level
+- ○ Temperature
+- ○ Encrypted backups
+- ○ Input devices via USB (USB-OTG) - keyboard, mouse and disks
+- ○ USB mass storage export
+- ○ Set brightness
+- ✔ Vibrate
+- ○ Screenshot
+- ✔ Partition SD card
+# Twrp Recovery Tree for Tecno Spark Go 2022(Tenma)
+![Tecno Go 2022(Tenma)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-go-2022-2.jpg)
