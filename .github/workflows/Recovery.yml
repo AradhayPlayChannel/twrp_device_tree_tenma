@@ -72,43 +72,43 @@ jobs:
         uses: rokibhasansagar/slimhub_actions@main
 
       - name: Prepare Environment
-  run: |
-    sudo apt update
-    sudo apt install -y \
-      gperf \
-      gcc-multilib \
-      g++-multilib \
-      libc6-dev \
-      lib32z1-dev \
-      lib32readline-dev \
-      libncurses-dev \
-      x11proto-core-dev \
-      libx11-dev \
-      libgl1-mesa-dev \
-      libxml2-utils \
-      xsltproc \
-      bc \
-      ccache \
-      liblz4-tool \
-      libxml2 \
-      lzop \
-      pngcrush \
-      schedtool \
-      squashfs-tools \
-      imagemagick \
-      libbz2-dev \
-      lzma \
-      ncftp \
-      qemu-user-static \
-      python3 \
-      unzip \
-      zip \
-      git \
-      curl \
-      flex \
-      bison \
-      rsync \
-      tree
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            gperf \
+            gcc-multilib \
+            g++-multilib \
+            libc6-dev \
+            lib32z1-dev \
+            lib32readline-dev \
+            libncurses-dev \
+            x11proto-core-dev \
+            libx11-dev \
+            libgl1-mesa-dev \
+            libxml2-utils \
+            xsltproc \
+            bc \
+            ccache \
+            liblz4-tool \
+            libxml2 \
+            lzop \
+            pngcrush \
+            schedtool \
+            squashfs-tools \
+            imagemagick \
+            libbz2-dev \
+            lzma \
+            ncftp \
+            qemu-user-static \
+            python3 \
+            unzip \
+            zip \
+            git \
+            curl \
+            flex \
+            bison \
+            rsync \
+            tree
 
       - name: Install OpenJDK 8
         uses: actions/setup-java@v4
@@ -119,7 +119,7 @@ jobs:
       - name: Install Repo Tool
         run: |
           mkdir -p ~/bin
-          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          curl -fsSL https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
           chmod +x ~/bin/repo
           sudo ln -sf ~/bin/repo /usr/bin/repo
 
@@ -141,7 +141,7 @@ jobs:
       - name: Repo Sync
         working-directory: workspace
         run: |
-          repo sync -j$(nproc) --force-sync
+          repo sync -j$(nproc --all) --force-sync
 
       - name: Clone Device Tree
         working-directory: ${{ steps.workspace.outputs.workspace }}
@@ -164,7 +164,8 @@ jobs:
 
           lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng
 
-          make ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc)
+          make clean
+          make ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
 
           echo "Build Finished Successfully"
 
@@ -177,10 +178,8 @@ jobs:
             Device: TECNO KG5
             Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
             Build Target: ${{ github.event.inputs.BUILD_TARGET }}.img
-
           files: |
             workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
             workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
