@@ -40,7 +40,7 @@ AB_OTA_UPDATER := true
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=user
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x11b00000
 BOARD_KERNEL_TAGS_OFFSET := 0x07880000
@@ -49,8 +49,8 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_CONFIG := kelly_defconfig
-TARGET_KERNEL_SOURCE := kernel/tecno/kelly
+# TARGET_KERNEL_CONFIG := kg5_defconfig
+# TARGET_KERNEL_SOURCE := kernel/tecno/kg5
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -150,7 +150,7 @@ BOARD_USES_MTK_HARDWARE := true
 
 ## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := kelexine-@xda
+TW_DEVICE_VERSION := ametzu_ae @tg
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file

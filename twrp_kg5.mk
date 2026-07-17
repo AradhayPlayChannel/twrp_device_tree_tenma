@@ -14,16 +14,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Inherit from kelly device
-$(call inherit-product, device/tecno/kelly/device.mk)
+# Inherit from kg5 device
+$(call inherit-product, device/tecno/kg5/device.mk)
 
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := kelly
-PRODUCT_NAME := twrp_kelly
+PRODUCT_DEVICE := kg5
+PRODUCT_NAME := twrp_kg5
 PRODUCT_BRAND := tecno
-PRODUCT_MODEL := kelly
+PRODUCT_MODEL := TECNO-KG5
 PRODUCT_MANUFACTURER := Tecno Mobility Limited
-PRODUCT_RELEASE_NAME := Tecno Spark 8C (kelly)
+PRODUCT_RELEASE_NAME := Tecno Go 2022(KG5)
