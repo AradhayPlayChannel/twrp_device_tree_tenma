@@ -21,7 +21,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: "Device Tree Branch"
         required: true
-        default: "main"
+        default: "kg5-bringup"
 
       DEVICE_PATH:
         description: "Device Path"
