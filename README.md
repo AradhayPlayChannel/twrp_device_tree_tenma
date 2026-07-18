@@ -18,9 +18,9 @@
 ## Blocking checks
 
 - ✔ Correct screen/recovery size
-- ✖ Working Touch (display works, touch does not)
-- ○ Backup to internal/microSD
-- ○ Restore from internal/microSD
+- ✔ Working Touch 
+- ✔ Backup to internal/microSD
+- ✔ Restore from internal/microSD
 - ✔ Reboot to system
 - ✔ ADB
 
@@ -30,26 +30,26 @@
 - ✔ UI colors (red/blue inversions)
 - ✔ Screen goes off and on
 - ✔ F2FS/EXT4 Support, exFAT/NTFS where supported
-- ○ All important partitions listed in mount/backup lists
-- ○ Backup/restore to/from external (USB-OTG) storage (mouse and keyboard)
-- ○ Backup/restore to/from ADB
+- ✖ All important partitions listed in mount/backup lists
+- ✔ Backup/restore to/from external (USB-OTG) storage (mouse and keyboard)
+- ✔ Backup/restore to/from ADB
 - ✔ Decrypt /data
 - ✔ Correct date
 
 ## Minor checks
 
-- ○ MTP export
+- ✔ MTP export
 - ✔ Reboot to bootloader
 - ✔ Reboot to recovery
 - ✔ Poweroff
-- ○ Battery level
-- ○ Temperature
-- ○ Encrypted backups
-- ○ Input devices via USB (USB-OTG) - keyboard, mouse and disks
-- ○ USB mass storage export
-- ○ Set brightness
+- ✖ Battery level
+- ✔ Temperature
+- ✖ Encrypted backups
+- ✖ Input devices via USB (USB-OTG) - keyboard, mouse and disks
+- ✔ USB mass storage export
+- ✔ Set brightness
 - ✔ Vibrate
-- ○ Screenshot
+- ✔ Screenshot
 - ✔ Partition SD card
 # Twrp Recovery Tree for Tecno Spark Go 2022(Tenma)
 ![Tecno Go 2022(Tenma)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-go-2022-2.jpg)
