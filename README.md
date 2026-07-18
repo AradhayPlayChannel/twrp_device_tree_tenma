@@ -2,7 +2,7 @@
 |--                  |--                                                            |
 |CPU                 |Quad-core (4x1.8 GHz Cortex-A53)      |
 |Chipset             |Mediatek Helio A20 MT6761 (12 nm)                                     |
-|GPU                 |PowerVR GE6300                                             |
+|GPU                 |PowerVR GE8300                                              |
 |Memory              |2GB RAM                                                     |
 |Android Version     |11 (HiOS 7.6)                                               |
 |Storage             |32GB                                                      |
@@ -38,7 +38,7 @@
 
 ## Minor checks
 
-- ✔ MTP export
+- ✖ MTP export
 - ✔ Reboot to bootloader
 - ✔ Reboot to recovery
 - ✔ Poweroff
@@ -50,6 +50,6 @@
 - ✔ Set brightness
 - ✔ Vibrate
 - ✔ Screenshot
-- ✔ Partition SD card
+- ✖ Partition SD card
 # Twrp Recovery Tree for Tecno Spark Go 2022(Tenma)
 ![Tecno Go 2022(Tenma)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-go-2022-2.jpg)
