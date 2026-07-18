@@ -51,5 +51,10 @@
 - ✔ Vibrate
 - ✔ Screenshot
 - ✖ Partition SD card
+# Flashing Instructions
+- Setup Mtkclient
+- Open cmd in mtkclient folder/cd into mtkclient
+- Run python mtk.py w boot_b boot.img (check your slot before flash)
+- Reboot
 # Twrp Recovery Tree for Tecno Spark Go 2022(Tenma)
 ![Tecno Go 2022(Tenma)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-go-2022-2.jpg)
