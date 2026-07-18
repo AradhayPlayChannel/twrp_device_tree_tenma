@@ -16,7 +16,7 @@ on:
       DEVICE_TREE_URL:
         description: "Device Tree URL"
         required: true
-        default: "https://github.com/AradhayPlayChannel/twrp_device_tecno_kg5"
+        default: "https://github.com/AradhayPlayChannel/device_tree_tenma"
 
       DEVICE_TREE_BRANCH:
         description: "Device Tree Branch"
