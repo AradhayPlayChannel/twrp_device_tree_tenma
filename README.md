@@ -30,7 +30,7 @@
 - ✔ UI colors (red/blue inversions)
 - ✔ Screen goes off and on
 - ✔ F2FS/EXT4 Support, exFAT/NTFS where supported
-- ✖ All important partitions listed in mount/backup lists
+- ✔ All important partitions listed in mount/backup lists
 - ✔ Backup/restore to/from external (USB-OTG) storage (mouse and keyboard)
 - ✔ Backup/restore to/from ADB
 - ✔ Decrypt /data
@@ -38,20 +38,22 @@
 
 ## Minor checks
 
-- ✖ MTP export
+- ✔ MTP export
 - ✔ Reboot to bootloader
 - ✔ Reboot to recovery
+- ✖ Reboot to system
 - ✔ Poweroff
-- ✖ Battery level
+- ✔ Battery level
 - ✔ Temperature
-- ✖ Encrypted backups
-- ✖ Input devices via USB (USB-OTG) - keyboard, mouse and disks
+- ✔ Encrypted backups
+- ✔ Input devices via USB (USB-OTG) - keyboard, mouse and disks
 - ✔ USB mass storage export
 - ✔ Set brightness
 - ✔ Vibrate
 - ✔ Screenshot
-- ✖ Partition SD card
+- ✔ Partition SD card
 # Flashing Instructions
+- BOOTLOADER MUST BE UNLOCKED AND YOU MUST HAVE A FUNCTIONAL BRAIN
 - Setup Mtkclient
 - Open cmd in mtkclient folder/cd into mtkclient
 - Run python mtk.py w boot_b boot.img (check your slot before flash)
