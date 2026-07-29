@@ -1,31 +1,9 @@
-#<src>                                           <mnt_point>        <type>  <mnt_flags>                                   <fs_mgr_flags>
+#<src>                                                  <mnt_point>           <type>              <mnt_flags and options>                      <fs_mgr_flags
+system                                     		/system                ext4                ro wait,slotselect,logical
+system_ext                                 		/system_ext            ext4                ro wait,slotselect,logical
+vendor                                     		/vendor                ext4                ro wait,slotselect,logical
+product                                    		/product               ext4                ro wait,slotselect,logical
 
-# Dynamic partitions
-system                                            /system           ext4    ro                                             wait,slotselect,logical
-system_ext                                        /system_ext       ext4    ro                                             wait,slotselect,logical
-vendor                                            /vendor           ext4    ro                                             wait,slotselect,logical
-product                                           /product          ext4    ro                                             wait,slotselect,logical
-
-# Metadata
-/dev/block/platform/bootdevice/by-name/md_udc     /metadata         ext4    noatime,nosuid,nodev,discard                  wait,check,formattable,first_stage_mount
-
-# Data
+/dev/block/platform/bootdevice/by-name/md_udc           /metadata	       ext4	          noatime,nosuid,nodev,discard                 wait,check,formattable,first_stage_mount
 /dev/block/platform/bootdevice/by-name/userdata         /data                  f2fs                noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,tran_gc wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
-
-# Misc
-/dev/block/platform/bootdevice/by-name/para       /misc             emmc    defaults                                      defaults
-
-# Boot
-/dev/block/platform/bootdevice/by-name/boot       /boot             emmc    defaults                                      slotselect
-
-# TranFS (Tecno)
-/dev/block/platform/bootdevice/by-name/tranfs     /tranfs           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard  wait,check,formattable
-
-# Persist
-/dev/block/platform/bootdevice/by-name/persist    /persist          ext4    noatime,nosuid,nodev                          wait
-
-# External SD
-/devices/platform/externdevice*                   /external_sd      auto    defaults                                      voldmanaged=sdcard1:auto
-
-# USB OTG
-/devices/platform/mt_usb*                         /usb-otg          vfat    defaults                                      voldmanaged=usbotg:auto
+/dev/block/platform/bootdevice/by-name/para             /misc                  emmc                defaults                                     defaults
