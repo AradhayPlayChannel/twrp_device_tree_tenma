@@ -11,7 +11,7 @@ on:
       MANIFEST_BRANCH:
         description: "Manifest Branch"
         required: true
-        default: "twrp-11"
+        default: "twrp-12.1"
 
       DEVICE_TREE_URL:
         description: "Device Tree URL"
