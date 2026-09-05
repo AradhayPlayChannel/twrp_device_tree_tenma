@@ -118,17 +118,18 @@ jobs:
         echo "---> Preparing for Uploads..."
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
-    - name: Upload Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.run_id }}
-          name: "TWRP Recovery for TECNO KG5 (Run ${{ github.run_id }})"
-          body: |
-            Device: TECNO KG5
-            Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
-            Build Target: ${{ github.event.inputs.BUILD_TARGET }}.img
-          files: |
-            workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
-            workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: | 
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
+        name: TWRP Recovery for TECNO KG5  "(${{ github.event.inputs.DEVICE_NAME }})" with run-id:${{ github.run_id }}
+        tag_name: ${{ github.run_id }}
+        body: |
+          TWRP Recovery for TECNO KG5 
+          Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
+          Device: ${{ github.event.inputs.DEVICE_NAME }}
+          Target: ${{ github.event.inputs.BUILD_TARGET }}.img
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
