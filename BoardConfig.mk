@@ -150,7 +150,7 @@ BOARD_USES_MTK_HARDWARE := true
 
 ## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := aradhayplaychannel
+TW_DEVICE_VERSION := aradhay_uefi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
@@ -162,18 +162,19 @@ TW_H_OFFSET := -50
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NANO := true
 TW_EXCLUDE_APEX := true
-TW_INCLUDE_LPDUMP := true
+TW_INCLUDE_LPDUMP := false
 TW_INCLUDE_LPTOOLS := true
 TW_EXCLUDE_BASH := true
 TW_INCLUDE_TWRPAPP := false
 TW_EXTRA_LANGUAGES := false
-TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_NTFS_3G := false
 TW_NO_SCREEN_BLANK := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_RESETPROP := true
 TW_HAS_MTP := true
 TW_FRAMERATE := 60
 TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_EXCLUDE_TZDATA := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
